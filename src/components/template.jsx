@@ -23,9 +23,9 @@ class Template extends Component {
 
     resetButton = () => {
         this.setState({
-            count: 0,
-            detail: ["detail1", "detail2", "detail3", "detail14", "detail5",]
+            count: 0
         })
+
     };
 
     formantCount = () => {
@@ -39,14 +39,18 @@ class Template extends Component {
         return classes;
     }
 
+    fontStyle = {
+        fontSize: "20px"
+    }
+
     render() {
         console.log("This is the component", Component);
-        return (<React.Fragment>
-            <span className={this.getBadgeClasses()}>{this.formantCount()}</span>
+        return (<div>
+            <span style={this.fontStyle} className={this.getBadgeClasses()}>{this.formantCount()}</span>
             <button onClick={this.handleIncrement} className="btn btn-success btn-sm m-1">Increase Value By 1</button>
             <button onClick={this.decreaseIncrement} className="btn btn-info btn-sm m-1">Decrease Value By 1</button>
-            <button Onclick={this.resetButton} className="btn btn-danger btn-sm m-1">Reset Current Value to Zero</button>
-        </React.Fragment >)
+            <button onclick={this.resetButton} className="btn btn-danger btn-sm m-1">Reset Current Value to Zero</button>
+        </div>)
 
 
     }

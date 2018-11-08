@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Template from "./template"; //parent
 
+
+
 class Templates extends Component {
     state = {
         templates: [{
